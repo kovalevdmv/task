@@ -115,14 +115,14 @@ namespace task
 			// записатьToolStripMenuItem
 			// 
 			this.записатьToolStripMenuItem.Name = "записатьToolStripMenuItem";
-			this.записатьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+			this.записатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.записатьToolStripMenuItem.Text = "Записать";
 			this.записатьToolStripMenuItem.Click += new System.EventHandler(this.ЗаписатьToolStripMenuItemClick);
 			// 
 			// прочитатьToolStripMenuItem
 			// 
 			this.прочитатьToolStripMenuItem.Name = "прочитатьToolStripMenuItem";
-			this.прочитатьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+			this.прочитатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.прочитатьToolStripMenuItem.Text = "Прочитать";
 			this.прочитатьToolStripMenuItem.Click += new System.EventHandler(this.ПрочитатьToolStripMenuItemClick);
 			// 
@@ -181,7 +181,7 @@ namespace task
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
-			this.Text = "task";
+			this.Text = "Задачи";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.contextMenuStrip2.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
