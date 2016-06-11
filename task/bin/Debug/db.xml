@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <nodes>
+    <Node>
+      <name>RKK</name>
+      <nodes />
+    </Node>
+    <Node>
+      <name>РКК</name>
+      <nodes>
+        <Node>
+          <name>Тест 1</name>
+          <nodes />
+        </Node>
+        <Node>
+          <name>Тест 2</name>
+          <nodes />
+        </Node>
+      </nodes>
+    </Node>
+    <Node>
+      <name>ДСТ</name>
+      <nodes>
+        <Node>
+          <name>Посмотреть как расчитывается цена</name>
+          <nodes />
+        </Node>
+      </nodes>
+    </Node>
+    <Node>
+      <name>Общепит</name>
+      <nodes>
+        <Node>
+          <name>Общепит</name>
+          <nodes />
+        </Node>
+      </nodes>
+    </Node>
+  </nodes>
+</Model>
