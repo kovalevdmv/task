@@ -73,7 +73,7 @@ namespace task
 			this.treeView1.ContextMenuStrip = this.contextMenuStrip2;
 			this.treeView1.Location = new System.Drawing.Point(12, 27);
 			this.treeView1.Name = "treeView1";
-			this.treeView1.Size = new System.Drawing.Size(440, 419);
+			this.treeView1.Size = new System.Drawing.Size(448, 417);
 			this.treeView1.TabIndex = 2;
 			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1AfterSelect);
 			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView1NodeMouseClick);
@@ -99,7 +99,7 @@ namespace task
 			this.менюToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(464, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(472, 24);
 			this.menuStrip1.TabIndex = 7;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -130,9 +130,9 @@ namespace task
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.toolStripStatusLabel1});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 449);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 447);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(464, 22);
+			this.statusStrip1.Size = new System.Drawing.Size(472, 22);
 			this.statusStrip1.TabIndex = 8;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -175,7 +175,7 @@ namespace task
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(464, 471);
+			this.ClientSize = new System.Drawing.Size(472, 469);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.treeView1);
 			this.Controls.Add(this.menuStrip1);
