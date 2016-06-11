@@ -15,6 +15,17 @@
           <name>Тест 2</name>
           <nodes />
         </Node>
+        <Node>
+          <check>false</check>
+          <name>6 НДФЛ</name>
+          <nodes>
+            <Node>
+              <check>false</check>
+              <name>Проверка ОКТМО</name>
+              <nodes />
+            </Node>
+          </nodes>
+        </Node>
       </nodes>
     </Node>
     <Node>
