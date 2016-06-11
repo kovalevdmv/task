@@ -3,11 +3,6 @@
   <nodes>
     <Node>
       <check>false</check>
-      <name>RKK</name>
-      <nodes />
-    </Node>
-    <Node>
-      <check>false</check>
       <name>РКК</name>
       <nodes>
         <Node>
