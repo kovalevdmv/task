@@ -15,3 +15,12 @@ C:\Users\dimon\Documents\SharpDevelop Projects\task\task\bin\Debug\task.exe
 C:\Users\dimon\Documents\SharpDevelop Projects\task\task\bin\Debug\task.pdb
 C:\Users\dimon\Documents\SharpDevelop Projects\task\task\obj\Debug\task.pdb
 C:\Users\dimon\Documents\SharpDevelop Projects\task\task\obj\Debug\task.FormEditNode.resources
+C:\Users\kovalevdv\Documents\GitHub\task\task\bin\Debug\task.exe.config
+C:\Users\kovalevdv\Documents\GitHub\task\task\bin\Debug\task.exe
+C:\Users\kovalevdv\Documents\GitHub\task\task\bin\Debug\task.pdb
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.csprojResolveAssemblyReference.cache
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.FormEditNode.resources
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.MainForm.resources
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.csproj.GenerateResource.Cache
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.exe
+C:\Users\kovalevdv\Documents\GitHub\task\task\obj\Debug\task.pdb
