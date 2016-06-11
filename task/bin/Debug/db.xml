@@ -2,35 +2,43 @@
 <Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <nodes>
     <Node>
+      <check>false</check>
       <name>RKK</name>
       <nodes />
     </Node>
     <Node>
+      <check>false</check>
       <name>РКК</name>
       <nodes>
         <Node>
+          <check>false</check>
           <name>Тест 1</name>
           <nodes />
         </Node>
         <Node>
+          <check>false</check>
           <name>Тест 2</name>
           <nodes />
         </Node>
       </nodes>
     </Node>
     <Node>
+      <check>false</check>
       <name>ДСТ</name>
       <nodes>
         <Node>
+          <check>false</check>
           <name>Посмотреть как расчитывается цена</name>
           <nodes />
         </Node>
       </nodes>
     </Node>
     <Node>
+      <check>false</check>
       <name>Общепит</name>
       <nodes>
         <Node>
+          <check>true</check>
           <name>Общепит</name>
           <nodes />
         </Node>

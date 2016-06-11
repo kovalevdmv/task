@@ -81,6 +81,7 @@ namespace task
 				} else {
 					elem = m.add(node.Text);
 				}
+				elem.check = node.Checked;
 				if (node.Nodes.Count > 0)
 					tree_to_model(node.Nodes, m, elem);
 			}
@@ -91,6 +92,7 @@ namespace task
 			foreach (Model.Node element in nodes) {
 				TreeNode elem = TreeNodes.Add(element.name);
 				elem.ContextMenuStrip = contextMenuStrip1;
+				elem.Checked=element.check;
 				if (element.nodes.Count > 0) {
 					model_to_tree(elem.Nodes, element.nodes);
 				}
@@ -157,6 +159,7 @@ namespace task
 			FormEditNode form_edit = new FormEditNode();
 			if (node_cur != null) {
 				form_edit.textBox1.Text = node_cur.Text;	
+				form_edit.checkBox1.Checked = node_cur.Checked;
 			}
 			form_edit.ShowDialog();
 			if (!form_edit.ok) { 
@@ -167,6 +170,7 @@ namespace task
 				add_node(form_edit.textBox1.Text);
 			else
 				node_cur.Text = form_edit.textBox1.Text;
+				node_cur.Checked = form_edit.checkBox1.Checked;
 
 			save_to_file();
 	
@@ -185,6 +189,7 @@ namespace task
 		public class Node
 		{
 			public Node parent;
+			public bool check=false;
 			public String name = "";
 			public List<Node> nodes = new List<Node>();
 		}
