@@ -28,21 +28,19 @@ namespace task
 	{
 		
 		TreeNode node_cur;
-		
-		
+		Font font_uncheked;
+		Font font_chekednew;
+		Font font_important;
 		
 		public MainForm()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
 			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
-		}
+			font_uncheked = new Font(treeView1.Font, treeView1.Font.Style);
+			font_chekednew = new Font(treeView1.Font, FontStyle.Strikeout);
+			font_important= new Font(treeView1.Font, FontStyle.Bold);
 
+		}
 		
 		TreeNode add_node(String text = "")
 		{
@@ -53,11 +51,11 @@ namespace task
 				el = treeView1.Nodes.Add(text);
 		
 			el.ContextMenuStrip = contextMenuStrip1;
+			el.Tag = new Adv_data();
 			
 			save_to_file();
 			
 			return el;
-	
 		}
 		
 		void TreeView1NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -65,13 +63,13 @@ namespace task
 			node_cur = e.Node;
 			toolStripStatusLabel1.Text = e.Node.Text;
 		}
+		
 		void TreeView1AfterSelect(object sender, TreeViewEventArgs e)
 		{
 			node_cur = e.Node;
 			toolStripStatusLabel1.Text = e.Node.Text;
 		}
 
-		
 		void tree_to_model(TreeNodeCollection nodes, Model m, Model.Node parent = null)
 		{
 			foreach (TreeNode node in nodes) {
@@ -82,6 +80,7 @@ namespace task
 					elem = m.add(node.Text);
 				}
 				elem.check = node.Checked;
+				elem.tag = (Adv_data)node.Tag;
 				if (node.Nodes.Count > 0)
 					tree_to_model(node.Nodes, m, elem);
 			}
@@ -92,11 +91,31 @@ namespace task
 			foreach (Model.Node element in nodes) {
 				TreeNode elem = TreeNodes.Add(element.name);
 				elem.ContextMenuStrip = contextMenuStrip1;
-				elem.Checked=element.check;
+				elem.Checked = element.check;
+				elem.Tag = element.tag;
+				setNodeFont(elem);
 				if (element.nodes.Count > 0) {
 					model_to_tree(elem.Nodes, element.nodes);
 				}
 			}
+		}
+		
+		void setNodeFont(TreeNode node)
+		{
+			Adv_data tag;
+			if (node.Tag!=null){
+				tag = (Adv_data) node.Tag;
+			} else {
+				tag = new Adv_data();
+			}
+			if (node.Checked) {
+				node.NodeFont = font_chekednew;
+			} else if (tag.important) {
+				node.NodeFont = font_important;
+			}
+			else {
+				node.NodeFont = font_uncheked;
+			} 		
 		}
 	
 
@@ -116,6 +135,7 @@ namespace task
 			if (File.Exists("db.xml")) {
 				Model m = MySerDeser.deser<Model>();
 				model_to_tree(treeView1.Nodes, m.nodes);
+				treeView1.ExpandAll();
 			}
 		}
 		
@@ -160,6 +180,11 @@ namespace task
 			if (node_cur != null) {
 				form_edit.textBox1.Text = node_cur.Text;	
 				form_edit.checkBox1.Checked = node_cur.Checked;
+				if (node_cur.Tag!=null){
+					Adv_data tag = (Adv_data) node_cur.Tag;
+					form_edit.checkBox_important.Checked = tag.important;
+					form_edit.textBox_itil_obrashenie.Text = tag.itil_obrashenie;
+				}
 			}
 			form_edit.ShowDialog();
 			if (!form_edit.ok) { 
@@ -168,10 +193,19 @@ namespace task
 			
 			if (new_node)
 				add_node(form_edit.textBox1.Text);
-			else
+			else {
 				node_cur.Text = form_edit.textBox1.Text;
 				node_cur.Checked = form_edit.checkBox1.Checked;
-
+				if (node_cur.Tag == null) {
+					node_cur.Tag = (Adv_data)new Adv_data();
+				}
+				Adv_data tag = (Adv_data)node_cur.Tag;
+				tag.important = form_edit.checkBox_important.Checked;
+				tag.itil_obrashenie = form_edit.textBox_itil_obrashenie.Text;
+				node_cur.Tag = (Adv_data)tag;
+				setNodeFont(node_cur);
+			}
+			
 			save_to_file();
 	
 		}
@@ -183,15 +217,21 @@ namespace task
 
 	}
 	
+	public class Adv_data
+	{
+		public bool important = false;
+		public String itil_obrashenie;
+	}
 	
 	public class Model
 	{
 		public class Node
 		{
 			public Node parent;
-			public bool check=false;
+			public bool check = false;
 			public String name = "";
 			public List<Node> nodes = new List<Node>();
+			public Adv_data tag;
 		}
 
 		public List<Node> nodes = new List<Node>();

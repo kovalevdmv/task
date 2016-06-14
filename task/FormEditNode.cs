@@ -39,5 +39,9 @@ namespace task
 		{
 			Close();
 		}
+		void CheckBox2CheckedChanged(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

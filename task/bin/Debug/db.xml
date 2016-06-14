@@ -7,24 +7,11 @@
       <nodes>
         <Node>
           <check>false</check>
-          <name>Тест 1</name>
+          <name>Оперативное</name>
           <nodes />
-        </Node>
-        <Node>
-          <check>false</check>
-          <name>Тест 2</name>
-          <nodes />
-        </Node>
-        <Node>
-          <check>false</check>
-          <name>6 НДФЛ</name>
-          <nodes>
-            <Node>
-              <check>false</check>
-              <name>Проверка ОКТМО</name>
-              <nodes />
-            </Node>
-          </nodes>
+          <tag>
+            <important>false</important>
+          </tag>
         </Node>
       </nodes>
     </Node>
@@ -34,21 +21,17 @@
       <nodes>
         <Node>
           <check>false</check>
-          <name>Посмотреть как расчитывается цена</name>
+          <name>Фактическая дата для отчета по плану факту</name>
           <nodes />
+          <tag>
+            <important>false</important>
+            <itil_obrashenie>123</itil_obrashenie>
+          </tag>
         </Node>
       </nodes>
-    </Node>
-    <Node>
-      <check>false</check>
-      <name>Общепит</name>
-      <nodes>
-        <Node>
-          <check>true</check>
-          <name>Общепит</name>
-          <nodes />
-        </Node>
-      </nodes>
+      <tag>
+        <important>false</important>
+      </tag>
     </Node>
   </nodes>
 </Model>

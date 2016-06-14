@@ -18,6 +18,10 @@ namespace task
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		public System.Windows.Forms.CheckBox checkBox1;
+		public System.Windows.Forms.CheckBox checkBox_important;
+		public System.Windows.Forms.TextBox textBox_itil_obrashenie;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,18 +48,24 @@ namespace task
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.checkBox_important = new System.Windows.Forms.CheckBox();
+			this.textBox_itil_obrashenie = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(12, 12);
+			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox1.Location = new System.Drawing.Point(12, 27);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(279, 20);
+			this.textBox1.Size = new System.Drawing.Size(408, 20);
 			this.textBox1.TabIndex = 0;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(135, 95);
+			this.button1.Location = new System.Drawing.Point(12, 141);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 1;
@@ -65,7 +75,7 @@ namespace task
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(216, 95);
+			this.button2.Location = new System.Drawing.Point(93, 141);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 2;
@@ -75,18 +85,57 @@ namespace task
 			// 
 			// checkBox1
 			// 
-			this.checkBox1.Location = new System.Drawing.Point(12, 38);
+			this.checkBox1.Location = new System.Drawing.Point(12, 92);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(104, 24);
+			this.checkBox1.Size = new System.Drawing.Size(93, 18);
 			this.checkBox1.TabIndex = 3;
 			this.checkBox1.Text = "Выполнено";
 			this.checkBox1.UseVisualStyleBackColor = true;
+			// 
+			// checkBox_important
+			// 
+			this.checkBox_important.Location = new System.Drawing.Point(13, 116);
+			this.checkBox_important.Name = "checkBox_important";
+			this.checkBox_important.Size = new System.Drawing.Size(155, 18);
+			this.checkBox_important.TabIndex = 4;
+			this.checkBox_important.Text = "Важное";
+			this.checkBox_important.UseVisualStyleBackColor = true;
+			this.checkBox_important.CheckedChanged += new System.EventHandler(this.CheckBox2CheckedChanged);
+			// 
+			// textBox_itil_obrashenie
+			// 
+			this.textBox_itil_obrashenie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox_itil_obrashenie.Location = new System.Drawing.Point(12, 66);
+			this.textBox_itil_obrashenie.Name = "textBox_itil_obrashenie";
+			this.textBox_itil_obrashenie.Size = new System.Drawing.Size(406, 20);
+			this.textBox_itil_obrashenie.TabIndex = 5;
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(13, 9);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(100, 12);
+			this.label1.TabIndex = 6;
+			this.label1.Text = "Наименование";
+			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(13, 50);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(146, 13);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Обращение в итилиуме";
 			// 
 			// FormEditNode
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(303, 130);
+			this.ClientSize = new System.Drawing.Size(432, 176);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.textBox_itil_obrashenie);
+			this.Controls.Add(this.checkBox_important);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);

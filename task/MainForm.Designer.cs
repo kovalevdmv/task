@@ -15,10 +15,6 @@ namespace task
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.TreeView treeView1;
-		private System.Windows.Forms.MenuStrip menuStrip1;
-		private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem записатьToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem прочитатьToolStripMenuItem;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -49,10 +45,6 @@ namespace task
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.addrootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.записатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.прочитатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -60,7 +52,6 @@ namespace task
 			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip2.SuspendLayout();
-			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -71,9 +62,10 @@ namespace task
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.treeView1.ContextMenuStrip = this.contextMenuStrip2;
-			this.treeView1.Location = new System.Drawing.Point(12, 27);
+			this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.treeView1.Location = new System.Drawing.Point(12, 12);
 			this.treeView1.Name = "treeView1";
-			this.treeView1.Size = new System.Drawing.Size(448, 417);
+			this.treeView1.Size = new System.Drawing.Size(448, 432);
 			this.treeView1.TabIndex = 2;
 			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1AfterSelect);
 			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView1NodeMouseClick);
@@ -92,39 +84,6 @@ namespace task
 			this.addrootToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
 			this.addrootToolStripMenuItem.Text = "Добавить в корень";
 			this.addrootToolStripMenuItem.Click += new System.EventHandler(this.AddrootToolStripMenuItemClick);
-			// 
-			// menuStrip1
-			// 
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.менюToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(472, 24);
-			this.menuStrip1.TabIndex = 7;
-			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// менюToolStripMenuItem
-			// 
-			this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.записатьToolStripMenuItem,
-			this.прочитатьToolStripMenuItem});
-			this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
-			this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-			this.менюToolStripMenuItem.Text = "Меню";
-			// 
-			// записатьToolStripMenuItem
-			// 
-			this.записатьToolStripMenuItem.Name = "записатьToolStripMenuItem";
-			this.записатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.записатьToolStripMenuItem.Text = "Записать";
-			this.записатьToolStripMenuItem.Click += new System.EventHandler(this.ЗаписатьToolStripMenuItemClick);
-			// 
-			// прочитатьToolStripMenuItem
-			// 
-			this.прочитатьToolStripMenuItem.Name = "прочитатьToolStripMenuItem";
-			this.прочитатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.прочитатьToolStripMenuItem.Text = "Прочитать";
-			this.прочитатьToolStripMenuItem.Click += new System.EventHandler(this.ПрочитатьToolStripMenuItemClick);
 			// 
 			// statusStrip1
 			// 
@@ -178,14 +137,10 @@ namespace task
 			this.ClientSize = new System.Drawing.Size(472, 469);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.treeView1);
-			this.Controls.Add(this.menuStrip1);
-			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "Задачи";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.contextMenuStrip2.ResumeLayout(false);
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.contextMenuStrip1.ResumeLayout(false);
